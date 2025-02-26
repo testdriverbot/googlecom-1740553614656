@@ -1,0 +1,9 @@
+version: 4.2.12
+session: 67bebfae65b243a17bd245fc
+steps:
+  - prompt: Scroll down to the footer.
+    commands:
+      - command: scroll-until-text
+        text: Privacy
+        direction: down
+        method: keyboard
