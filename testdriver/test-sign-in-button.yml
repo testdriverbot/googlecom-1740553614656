@@ -1,0 +1,15 @@
+version: 4.2.12
+session: 67bebfb165b243a17bd24600
+steps:
+  - prompt: Click on the "Sign in" button.
+    commands:
+      - command: hover-text
+        text: Sign in
+        description: sign in button in the top right corner of the Google homepage
+        action: click
+  - prompt: >-
+      Assert that the sign-in page is displayed.  # Use the content of the file
+      from the environment
+    commands:
+      - command: assert
+        expect: the sign-in page is displayed
