@@ -1,0 +1,23 @@
+version: 4.2.12
+session: 67bebfb165b243a17bd245fe
+steps:
+  - prompt: Type a search term into the search box.
+    commands:
+      - command: hover-text
+        text: Search Google or type a URL
+        description: main google search
+        action: click
+      - command: type
+        text: example search term
+  - prompt: Click on "I'm Feeling Lucky".
+    commands:
+      - command: hover-text
+        text: I'm Feeling Lucky
+        description: button next to Google Search on the homepage
+        action: click
+  - prompt: >-
+      Assert that the user is redirected to a relevant page directly.  # Use the
+      content of the file from the environment
+    commands:
+      - command: assert
+        expect: the page displays results for "nebulae"
